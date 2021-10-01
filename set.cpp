@@ -16,6 +16,7 @@ int main()
     s1.insert(20);
     s1.insert(50);
      
+    // int i : s1; 
     // only one 50 will be added to the set
     s1.insert(50);
     s1.insert(10);
@@ -78,3 +79,100 @@ int main()
  
     return 0;
 }
+
+// C++ program to demonstrate various function of unordered_set
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main()
+// {
+// 	// declaring set for storing string data-type
+// 	unordered_set <string> stringSet ;
+
+// 	// inserting various string, same string will be stored
+// 	// once in set
+
+//     int i = 9;
+//     string str = "hello"+ to_string(i);
+
+//     stringSet.insert(str) ;
+// 	stringSet.insert("code") ;
+// 	stringSet.insert("in") ;
+// 	stringSet.insert("c++") ;
+// 	stringSet.insert("is") ;
+// 	stringSet.insert("fast") ;
+
+// 	string key = "slow" ;
+
+// 	// find returns end iterator if key is not found,
+// 	// else it returns iterator to that key
+
+// 	if (stringSet.find(key) == stringSet.end())
+// 		cout << key << " not found" << endl << endl ;
+// 	else
+// 		cout << "Found " << key << endl << endl ;
+
+// 	key = "c++";
+// 	if (stringSet.find(key) == stringSet.end())
+// 		cout << key << " not found\n" ;
+// 	else
+// 		cout << "Found " << key << endl ;
+
+// 	// now iterating over whole set and printing its
+// 	// content
+// 	cout << "\nAll elements : ";
+// 	unordered_set<string> :: iterator itr;
+// 	for (itr = stringSet.begin(); itr != stringSet.end(); itr++)
+// 		cout << (*itr) << endl;
+// }
+// C program to find first
+// non-repeating character
+// #include <stdio.h>
+// #include <stdlib.h>
+// #define NO_OF_CHARS 256
+
+// /* Returns an array of size 256 containing count
+// of characters in the passed char array */
+// int* getCharCountArray(char* str)
+// {
+// 	int* count = (int*)calloc(sizeof(int), NO_OF_CHARS);
+// 	int i;
+// 	for (i = 0; *(str + i); i++)
+// 		count[*(str + i)]++;
+// 	return count;
+// }
+
+// /* The function returns index of first
+// non-repeating character in a string. If all
+// characters are repeating then returns -1 */
+// int firstNonRepeating(char* str)
+// {
+// 	int* count = getCharCountArray(str);
+// 	int index = -1, i;
+
+// 	for (i = 0; *(str + i); i++) {
+// 		if (count[*(str + i)] == 1) {
+// 			index = i;
+// 			break;
+// 		}
+// 	}
+
+// 	// To avoid memory leak
+// 	free(count);
+// 	return index;
+// }
+
+// /* Driver program to test above function */
+// int main()
+// {
+// 	char str[] = "geeksforgeeks";
+// 	int index = firstNonRepeating(str);
+// 	if (index == -1)
+// 		printf("Either all characters are repeating or "
+// 			"string is empty");
+// 	else
+// 		printf("First non-repeating character is %c",
+// 			str[index]);
+// 	getchar();
+// 	return 0;
+// }
